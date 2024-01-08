@@ -1,14 +1,39 @@
-!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>HTML Input</title>
     <style>
+      body {
+        background-color:grey;
+      }
       header {
         background-color: red;
         color: white;
         text-align: center;
+        border:solid;
+        border-radius:30px;
+      }
+.title {
+  color: grey;
+  font-size: 20px;
+  width: 100px;
+  height: 100px;
+  border: solid;
+  border-color: white;
+  padding: 30px;
+  border-radius: 60px;
+  margin-right: 70%;
+  margin-left:10%;
+  background-color: rgb(from color blue white red);
+
+
+  
+
+}
+      li {
+        list-style: none;
       }
       main {
         background: whitesmoke;
@@ -18,98 +43,149 @@
         border-radius: 8px;
         border-color: blueviolet;
       }
-      label {
+      label { 
+        
       }
-
-      button {
+.interests {
+  border: solid;
+  border-radius: 10px;
+  border-color: red;
+  padding: 30px 0 30px 10px;
+  margin-right: 2px;
+  display: block;
+  text-align: center;
+}
+ .information {
         background: white;
         color: white;
       }
-      button:hover {
+  .information:hover {
         background: red;
       }
     </style>
   </head>
   <body>
     <header>
-      <h1>Welcome to the Monument Quiz of ...</h1>
+      <h1><div class="title">Welcome to the Monument Quiz!</div></h1>
+     
+      Let's discover ... 
 
-      <h2>Big Ben</h2>
+      <h2>Big Ben! </h2>
       <div>
-        <label for="interest">What are you insterested in?</label>
-        <input type="radio" name="interests" id="history" /><label for="history"
-          >History</label
-        >
-        <input type="radio" name="interests" id="art" /><label for="art"
-          >Art</label
-        >
-        <input type="radio" name="interests" id="fun-facts" /><label
-          for="fun-facts"
-          >Fun-facts</label
-        >
+        <p>The clock London ticks to!
+          <br>
+          Choose your area of interest and answer the questions<p>
+            <br>
+          <li>History</li>
+          <li>Art</li>
+          <li>Fun-Facts</li>
       </div>
     </header>
     <main>
-      <h1>History</h1>
-
-      <div>
+      <div class="interests">
+      <h3>History</h3>
+      
         <label for="built">When was Big Ben built?</label>
-        <input type="radio" name="built" id="1750" /><label for="1750"
+        <input type="radio" name="built" value="1750" /><label for="1750"
           >1750</label
         >
-        <input type="radio" name="built" id="1859" /><label for="1859"
+        <input type="radio" name="built" value="1859" /><label for="1859"
           >1859</label
         >
-        <input type="radio" name="built" id="1830" /><label for="1830"
+        <input type="radio" name="built" value="1830" /><label for="1830"
           >1830</label
         >
+        <button onclick="checkAnswer()">Submit</button>
       </div>
+      Click here for more information
+<div class="information">Big Ben is more than 96 metres (105yrds) tall. You have to climb 334
+          steps to get to the Belfry and 399 steps to get to the very top where
+          the Ayrton Light which is</div>
 
-      <h1>Art</h1>
-      <div>
+      <div class="interests">
+      <h3>Art</h3>
+      
         <label for="style">What is the architectural style of Big Ben?</label>
-        <input type="radio" name="style" id="neo" /><label for="neo"
+        <input type="radio" name="style" value="neo" /><label for="neo"
           >Neoclassiicism</label
         >
-        <input type="radio" name="style" id="ren" /><label for="ren"
+        <input type="radio" name="style" value="ren" /><label for="ren"
           >Rennaissance</label
         >
-        <input type="radio" name="style" id="got-rev" /><label for="got-rev"
+        <input type="radio" name="style" value="got-rev" /><label for="got-rev"
           >Gothic Revival</label
         >
-      </div>
+        
+        <button onclick="checkStyle()">Submit</button>
 
-      <h1>Fun-fact</h1>
-      <div>
+      </div>
+   Click here for more information
+<div class="information">Big Ben is more than 96 metres (105yrds) tall. You have to climb 334
+          steps to get to the Belfry and 399 steps to get to the very top where
+          the Ayrton Light which is</div>
+
+      <div class="interests">
+      <h3>Fun-facts</h3>
+      
         <label for="fun">How tall is Big Ben?</label>
-        <input type="radio" name="fun" id="five" /><label for="five"
+        <input type="radio" name="fun" value="five" /><label for="five"
           >59 meters- 345 steps</label
         >
-        <input type="radio" name="fun" id="six" /><label for="six"
+        <input type="radio" name="fun" value="six" /><label for="six"
           >66 meters - 365 steps</label
         >
-        <input type="radio" name="fun" id="nine" /><label for="nine"
+        <input type="radio" name="fun" value="nine" /><label for="nine"
           >96 meters - 399 steps</label
         >
-        <span class="answer"> Click here for answer</span>
-        <button class="fun-fact">
-          Big Ben is more than 96 metres (105yrds) tall. You have to climb 334
-          steps to get to the Belfry and 399 steps to get to the very top where
-          the Ayrton Light which is
-        </button>
+                
+        <button onclick="checkFun()">Submit</button>
+        
+        
       </div>
+         Click here for more information
+<div class="information">Big Ben is more than 96 metres (105yrds) tall. You have to climb 334
+          steps to get to the Belfry and 399 steps to get to the very top where
+          the Ayrton Light which is</div>
+
     </main>
 
+
+</div>
     <script>
-      let character = prompt("Are you very active?");
-      character = character.toLowerCase().trim();
-      if (character === "yes") {
-        alert("Hi " + name + " choose " + "Nata!❤️");
-      } else {
-        if (character === "no") {
-          alert("Hi " + name + " choose " + "Lila!❤️");
-        }
-      }
+      function checkAnswer() {
+        let selectedOption = document.querySelector('input[name="built"]:checked');
+          if (selectedOption) {
+          let answer = selectedOption.value;
+
+          if (answer === "1859") {
+           alert ("Well done!");
+         } else {alert ("Sorry! Please Try again!");
+        } 
+      }}
+
+function checkStyle() {
+        let selectedOption = document.querySelector('input[name="style"]:checked');
+          if (selectedOption) {
+          let answer = selectedOption.value;
+
+          if (answer === "got-rev") {
+           alert ("Well done!");
+         } else {alert ("Sorry! Please Try again!");
+        } 
+      }}
+
+      function checkFun() { 
+          let selectedOption = document.querySelector('input[name="fun"]:checked');
+          if (selectedOption) {
+          let answer = selectedOption.value;
+
+          if (answer === "nine") {
+           alert ("Well done!");
+         } else {alert ("Sorry! Please Try again!");
+        } 
+      }}
+        
+
     </script>
   </body>
 </html>
