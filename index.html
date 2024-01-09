@@ -5,37 +5,45 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>HTML Input</title>
     <style>
-      body {
-        background-color:grey;
+      body {        background: linear-gradient(181deg, rgb(2, 0, 97) 15%, rgb(97, 149, 219) 158.5%);
+        
       }
       header {
-        background-color: red;
+        background: radial-gradient(circle at 10% 20%, rgb(7, 121, 222) 0%, rgb(20, 72, 140) 90%);
         color: white;
         text-align: center;
         border:solid;
         border-radius:30px;
         padding: 30px;
+      
       }
 .title {
+  background: linear-gradient(102.2deg, rgb(250, 45, 66) 9.6%, rgb(245, 104, 104) 96.1%);
   color: navy;
   font-size: 30px;
-  width: 200px;
-  height: 100px;
-  border: solid;
-  border-color: white;
+  border: solid 5px black;
   padding: 30px;
   border-radius: 60px;
-  margin-right: 70%;
-  margin-left:10%;
-  background-color: rgb(from color blue white red);
-  text-align: center;
-
-
   
+  }
 
-}
-      li {
+  .invite {
+    font-size: 70px;
+    color: white;
+    font-weight: bold;
+  }
+
+  h2 {
+    font-size: 70px;
+    color: whitesmoke;
+    font-weight: bold;
+  }
+      ul {
         list-style: none;
+        background-color:rgb(97, 149, 219);
+        border: solid 25px red;
+        border-radius: 40px;
+        padding: 15px 30px;
       }
       main {
         background: whitesmoke;
@@ -45,7 +53,7 @@
         border-radius: 8px;
         border-color: blueviolet;
       }
-      label { 
+      p { font-size: 35px;
         
       }
 .interests {
@@ -64,24 +72,33 @@
   .information:hover {
         background: red;
       }
+      .foto-one {
+        border: red solid;
+        border-radius: 30%;
+        position: center;
+      
+      }
     </style>
   </head>
   <body>
     <header>
       <h1><div class="title">Welcome to the Monument Quiz!</div></h1>
-     
-      Let's discover ... 
+      
+     <p class="invite">Let's discover ... </div></p>
 
-      <h2>Big Ben! </h2>
-      <span class="foto-one">img src="https://www.expedia.ie/Big-Ben-London-City-Centre.d6060186.Attraction?gallery-dialog=gallery-open"</span>
+      <img class="foto-one" src="https://www.london-forever.com/wp-content/uploads/2019/04/big-ben-3.jpg" alt="" 
+      width="45%">
+         
+      <h2>🩷Big Ben🩷</h2>       
       <div>
-        <p>The clock London ticks to!
+        <p>The clock London ticks to!</p>
           <br>
           Choose your area of interest and answer the questions<p>
-          
+          <ul>
           <li>History</li>
           <li>Art</li>
           <li>Fun-Facts</li>
+          </ul>
       </div>
     </header>
     <main>
@@ -110,7 +127,7 @@
       
         <label for="style">What is the architectural style of Big Ben?</label>
         <input type="radio" name="style" value="neo" /><label for="neo"
-          >Neoclassiicism</label
+          >Neoclassicism</label
         >
         <input type="radio" name="style" value="ren" /><label for="ren"
           >Rennaissance</label
