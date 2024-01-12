@@ -63,8 +63,11 @@
   padding: 30px 0 30px 10px;
   margin-right: 2px;
   display: block;
-  text-align: center;
+  
 }
+
+h3 {text-align: center;
+color:rgb(2, 0, 97);}
  .information {
         background: white;
         color: white;
@@ -84,6 +87,23 @@
         color: white;
         text-align: center;
       }
+
+      .facts
+       {
+        background: yellow;
+        color: blue;
+        border: solid 5px black;
+        border-radius: 30px;
+        
+      
+
+      }
+      button {
+        background: red;
+        color:rgb(2, 0, 97);
+        border: solid 2px blue;
+        border-radius: 30px;
+      }
     </style>
   </head>
   <body>
@@ -99,7 +119,7 @@
       <div>
         <p>The clock London ticks to!</p>
           <br>
-          Choose your area of interest and answer the questions<p>
+          Choose your area of interest</p>
           <ul>
           <li>History</li>
           <li>Art</li>
@@ -108,9 +128,10 @@
       </div>
     </header>
     <main>
+      <h3> Feeling Sharp? Take the quiz! Feeling a little rusty? Click under the yellow button first</h3>
       <div class="interests">
       <h3>History</h3>
-      
+      <ul>
         <label for="built">When was Big Ben built?</label>
         <input type="radio" name="built" value="1750" /><label for="1750"
           >1750</label
@@ -121,17 +142,32 @@
         <input type="radio" name="built" value="1830" /><label for="1830"
           >1830</label
         >
-        <button onclick="checkAnswer()">Submit</button>
+         <button onclick="checkBuilt()">Submit</button>
+        <br>
+         <label for="name">What is Big Ben's new name since 2012?</label>
+        <input type="radio" name="Change" value="Churchill" /><label for="Churchill"
+          >Churchill Tower
+          </label
+        >
+        <input type="radio" name="Change" value="Victoria" /><label for="Victoria"
+          >Victoria Time</label
+        >
+        <input type="radio" name="Change" value="Elizabeth" /><label for="Elizabeth"
+          >Elizabeth Tower</label>
+          
+
+       <button onclick="checkChange()">Submit</button>
+          </ul>
       </div>
-      Click here for more information
-<div class="information">Big Ben is more than 96 metres (105yrds) tall. You have to climb 334
+      <h3>    <button class="facts">History Facts</button></h3>
+<div class="information">The name Big Ben was changed to Elizabeth Tower in 2012 in honour to Queen Elizabeth on her jubilee. Big Ben is more than 96 metres (105yrds) tall. You have to climb 334
           steps to get to the Belfry and 399 steps to get to the very top where
           the Ayrton Light which is</div>
 
       <div class="interests">
       <h3>Art</h3>
-      
-        <label for="style">What is the architectural style of Big Ben?</label>
+      <ul>
+        <label for="style">What is the archtectural style of Big Ben?</label>
         <input type="radio" name="style" value="neo" /><label for="neo"
           >Neoclassicism</label
         >
@@ -143,15 +179,30 @@
         >
         
         <button onclick="checkStyle()">Submit</button>
+        <br>
+        
+        <label for="shields">What is not on the 52 shields on top of the belfry?</label>
+
+           <input type="radio" name="shields" value="henry" /><label for="henry"
+          >Henry VIII's sword</label>
+        <input type="radio" name="shields" value="emblem" /><label for="emblem"
+          >National Emblems</label>
+        <input type="radio" name="shields" value="pomegranate" /><label for="pome"
+          >Fleurs-de-lis</label>
+        
+        <button onclick="checkShields()">Submit</button>
+
+        </ul>
 
       </div>
-   Click here for more information
+   <h3><button class="facts">Art Facts</button></h3>
 <div class="information">Big Ben is more than 96 metres (105yrds) tall. You have to climb 334
           steps to get to the Belfry and 399 steps to get to the very top where
           the Ayrton Light which is</div>
 
       <div class="interests">
       <h3>Fun-facts</h3>
+      <ul>
       
         <label for="fun">How tall is Big Ben?</label>
         <input type="radio" name="fun" value="five" /><label for="five"
@@ -166,9 +217,23 @@
                 
         <button onclick="checkFun()">Submit</button>
         
+        <br>
+        <label for="clock">What stopped unstoppable Big Ben?</label>
+        <input type="radio" name="clock" value="starlings" /><label for="starlings"
+          >A flock of starlings</label
+        >
+        <input type="radio" name="clock" value="cold" /><label for="cold"
+          >Cold New Year's Eve in 1962</label
+        >
+        <input type="radio" name="clock" value="both" /><label for="both"
+          >Both are correct</label
+        >
+                
+        <button onclick="checkClock()">Submit</button>
+        </ul>
         
       </div>
-         Click here for more information
+        <h3><button class="facts">Fun Facts</button></h3>
 <div class="information">Big Ben is more than 96 metres (105yrds) tall. You have to climb 334
           steps to get to the Belfry and 399 steps to get to the very top where
           the Ayrton Light which is</div>
@@ -182,17 +247,31 @@
 
 </div>
     <script>
-      function checkAnswer() {
+      function checkBuilt() {
+
         let selectedOption = document.querySelector('input[name="built"]:checked');
-          if (selectedOption) {
-          let answer = selectedOption.value;
+                  if (selectedOption) {
+    
+          let answer= selectedOption.value;
 
           if (answer === "1859") {
            alert ("Well done!");
          } else {alert ("Sorry! Please Try again!");
         } 
-      }}
+        }} 
 
+          function checkChange() {
+
+        let selectedOption = document.querySelector('input[name="change"]:checked');
+                  if (selectedOption) {
+    
+          let answer= selectedOption.value;
+
+          if (answer === "Elizabeth") {
+           alert ("Well done!");
+         } else {alert ("Sorry! Please Try again!");
+        } 
+        }} 
 function checkStyle() {
         let selectedOption = document.querySelector('input[name="style"]:checked');
           if (selectedOption) {
@@ -204,12 +283,33 @@ function checkStyle() {
         } 
       }}
 
+      function checkShields() {
+        let selectedOption = document.querySelector('input[name="shields"]:checked');
+          if (selectedOption) {
+          let answer = selectedOption.value;
+
+          if (answer === "henry") {
+           alert ("Well done!");
+         } else {alert ("Sorry! Please Try again!");
+        } 
+      }}
+
       function checkFun() { 
           let selectedOption = document.querySelector('input[name="fun"]:checked');
           if (selectedOption) {
           let answer = selectedOption.value;
 
           if (answer === "nine") {
+           alert ("Well done!");
+         } else {alert ("Sorry! Please Try again!");
+        } 
+      }}
+         function checkClock() { 
+          let selectedOption = document.querySelector('input[name="clock"]:checked');
+          if (selectedOption) {
+          let answer = selectedOption.value;
+
+          if (answer === "both") {
            alert ("Well done!");
          } else {alert ("Sorry! Please Try again!");
         } 
