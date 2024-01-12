@@ -5,14 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>HTML Input</title>
     <style>
-      body {        background: linear-gradient(181deg, rgb(2, 0, 97) 15%, rgb(97, 149, 219) 158.5%);
+      body {   background: whitesmoke;
+        color: rgb(7, 121, 222);
+        text-align: center;
         
       }
       header {
         background: radial-gradient(circle at 10% 20%, rgb(7, 121, 222) 0%, rgb(20, 72, 140) 90%);
         color: white;
         text-align: center;
-        border:solid;
+      border: solid;
         border-radius:30px;
         padding: 30px;
       
@@ -38,15 +40,32 @@
     color: whitesmoke;
     font-weight: bold;
   }
-      ul {
+
+  .intro {
         list-style: none;
         background-color:rgb(97, 149, 219);
-        border: solid 25px red;
-        border-radius: 40px;
+        color: whitesmoke;
+        border: solid 5px red;
+        border-radius: 30px;
         padding: 15px 30px;
+        font-size:larger;
+        line-height: 1,2;
+      }
+      ul {
+        list-style: none;
+        background: radial-gradient(circle at 10% 20%, rgb(7, 121, 222) 0%, rgb(20, 72, 140) 90%);
+        color: whitesmoke;
+        border: solid 5px red;
+        border-radius: 30px;
+        padding: 15px 30px;
+        line-height: 1,2;
       }
       main {
-        background: whitesmoke;
+        background: radial-gradient(circle at 10% 20%, rgb(7, 121, 222) 0%, rgb(20, 72, 140) 90%);
+        border-radius: 30px;
+        
+      
+
       }
       input {
         padding: 5px 10px;
@@ -57,27 +76,37 @@
         
       }
 .interests {
-  border: solid;
-  border-radius: 10px;
-  border-color: red;
-  padding: 30px 0 30px 10px;
+  padding: 30px auto;
   margin-right: 2px;
   display: block;
   
 }
 
 h3 {text-align: center;
-color:rgb(2, 0, 97);}
+  color: rgb(2, 0, 97);
+ background: radial-gradient(circle at 10% 20%, rgb(7, 121, 222) 0%, rgb(20, 72, 140) 90%);
+        color:whitesmoke;
+        border: solid 2px rgb(7, 121, 222);
+        border-radius: 30px;
+        padding: 10px auto;
+}
+
  .information {
-        background: white;
-        color: white;
+        background: whitesmoke;
+        color: whitesmoke;
       }
   .information:hover {
-        background: red;
+        background: radial-gradient(circle at 10% 20%, rgb(7, 121, 222) 0%, rgb(20, 72, 140) 90%);
+        border: solid 2px rgb(245, 104, 104);
+        border-radius: 30px;
+        line-height: 2;
+        text-align: center;
+        font-size: larger;
+        padding: 10px;
       }
       .foto-one {
         border: red solid;
-        border-radius: 30%;
+        border-radius: 30px;
         position: center;
       
       }
@@ -90,20 +119,29 @@ color:rgb(2, 0, 97);}
 
       .facts
        {
-        background: yellow;
+        background: pink;
         color: blue;
-        border: solid 5px black;
+        border: solid 5px red;
         border-radius: 30px;
         
-      
+       }
 
-      }
+      
       button {
-        background: red;
-        color:rgb(2, 0, 97);
-        border: solid 2px blue;
+        
+        background: rgb(97, 149, 219);
+        color:whitesmoke;
+        border: solid 2px rgb(7, 121, 222);
         border-radius: 30px;
       }
+
+      footer {  background: radial-gradient(circle at 10% 20%, rgb(7, 121, 222) 0%, rgb(20, 72, 140) 90%);
+        color: white;
+        text-align: center;
+      border: solid;
+        border-radius:30px;
+        padding: 30px;
+      } 
     </style>
   </head>
   <body>
@@ -119,16 +157,21 @@ color:rgb(2, 0, 97);}
       <div>
         <p>The clock London ticks to!</p>
           <br>
-          Choose your area of interest</p>
-          <ul>
+            <ul class="intro">
+              <li>Choose your area of interest:</li>
+              <br>
           <li>History</li>
           <li>Art</li>
           <li>Fun-Facts</li>
+          <br>
+          🩷Feeling Sharp? Take the quiz!🩷
+        <br>
+        🩷Feeling a little rusty? Click under the <button class = "facts">Facts Button</button> first🩷 </h3>
           </ul>
       </div>
     </header>
     <main>
-      <h3> Feeling Sharp? Take the quiz! Feeling a little rusty? Click under the yellow button first</h3>
+         
       <div class="interests">
       <h3>History</h3>
       <ul>
@@ -145,25 +188,40 @@ color:rgb(2, 0, 97);}
          <button onclick="checkBuilt()">Submit</button>
         <br>
          <label for="name">What is Big Ben's new name since 2012?</label>
-        <input type="radio" name="Change" value="Churchill" /><label for="Churchill"
+        <input type="radio" name="change" value="churchill" /><label for="churchill"
           >Churchill Tower
           </label
         >
-        <input type="radio" name="Change" value="Victoria" /><label for="Victoria"
+        <input type="radio" name="change" value="victoria" /><label for="victoria"
           >Victoria Time</label
         >
-        <input type="radio" name="Change" value="Elizabeth" /><label for="Elizabeth"
+        <input type="radio" name="change" value="elizabeth" /><label for="elizabeth"
           >Elizabeth Tower</label>
           
 
        <button onclick="checkChange()">Submit</button>
+       <br>
+
+         <label for="light">The Ayrton Light is lit when ... </label>
+        <input type="radio" name="light" value="commons" /><label for="commons"
+          >the commons work at night.</label
+        >
+        <input type="radio" name="light" value="monarch" /><label for="monarch"
+          >the king is abroad.</label
+        >
+        <input type="radio" name="light" value="elections" /><label for="elections"
+          >it's raining.</label>
+          
+
+       <button onclick="checkLight()">Submit</button>
+       
+       </ul>
           </ul>
       </div>
       <h3>    <button class="facts">History Facts</button></h3>
-<div class="information">The name Big Ben was changed to Elizabeth Tower in 2012 in honour to Queen Elizabeth on her jubilee. Big Ben is more than 96 metres (105yrds) tall. You have to climb 334
-          steps to get to the Belfry and 399 steps to get to the very top where
-          the Ayrton Light which is</div>
-
+<div class="information">Did you know that Big Ben is not the name of the tower, but the bell inside it? The tower was renamed Elizabeth Tower in 2012 to celebrate the Queen's jubilee.
+   It's a pretty tall tower, over 96 metres high. If you want to see the bell, you have to climb a lot of stairs: 334 to reach the belfry and 399 to get to the top. There's a light on top of the tower called the Ayrton Light, which turns on when the House of Commons is in session at night. 
+  You can see it from all over London. It used to point towards Buckingham Palace, so the Queen could keep an eye on the politicians.
       <div class="interests">
       <h3>Art</h3>
       <ul>
@@ -181,7 +239,7 @@ color:rgb(2, 0, 97);}
         <button onclick="checkStyle()">Submit</button>
         <br>
         
-        <label for="shields">What is not on the 52 shields on top of the belfry?</label>
+        <label for="shields">What is not on the shields above the belfry?</label>
 
            <input type="radio" name="shields" value="henry" /><label for="henry"
           >Henry VIII's sword</label>
@@ -191,17 +249,39 @@ color:rgb(2, 0, 97);}
           >Fleurs-de-lis</label>
         
         <button onclick="checkShields()">Submit</button>
+        <br>
+        
+        <label for="latin">To which monarch does the latin inscription refer to?</label>
+
+           <input type="radio" name="latin" value="george" /><label for="george"
+          >King George VI</label>
+        <input type="radio" name="latin" value="eigth" /><label for="eigth"
+          >Henry VIII</label>
+        <input type="radio" name="latin" value="victoria" /><label for="victoria"
+          >Queen Victoria</label>
+        
+        <button onclick="checkLatin()">Submit</button>
 
         </ul>
 
       </div>
    <h3><button class="facts">Art Facts</button></h3>
-<div class="information">Big Ben is more than 96 metres (105yrds) tall. You have to climb 334
-          steps to get to the Belfry and 399 steps to get to the very top where
-          the Ayrton Light which is</div>
+<div class="information"> 
+The tower was designed by Augustus Pugin in a Perpendicular Gothic Revival style. 
+<br>
+Above the belfry and Ayrton light are 52 shields on which the following items are featured: 
+<br>
+the national emblems of the four countries of the UK: the red and 
+white rose of England's Tudor dynasty, the thistle of Scotland, shamrock of Northern Ireland, and leek of Wales, 
+the pomegranate of Catherine of Aragon, first wife of the Tudor king Henry VIII,
+the portcullis, symbolising both Houses of Parliament and last but not least, the fleurs-de-lis, legacy from when English monarchs claimed to rule France.
+<br>
+The dials are surrounded by a gilded ornament. At the base of each dial there 
+is a Latin inscription to Queen Victoria: DOMINE SALVAM FAC REGINAM NOSTRAM VICTORIAM PRIMAM, which means
+ "O Lord, keep safe our Queen Victoria the First".</div>
 
       <div class="interests">
-      <h3>Fun-facts</h3>
+      <h3>Fun Facts</h3>
       <ul>
       
         <label for="fun">How tall is Big Ben?</label>
@@ -230,16 +310,45 @@ color:rgb(2, 0, 97);}
         >
                 
         <button onclick="checkClock()">Submit</button>
+        
+        
+        <br>
+        <label for="">When did the BBC first broadcast Big Ben's chimes?</label>
+        <input type="radio" name="chimes" value="bbc" /><label for="bbc"
+          >1923</label
+        >
+        <input type="radio" name="chimes" value="cnn" /><label for="cnn"
+          >1945</label
+        >
+        <input type="radio" name="chimes" value="royal" /><label for="royal"
+          >1999</label
+        >
+            
+        <button onclick="checkChimes()">Submit</button>
         </ul>
         
       </div>
         <h3><button class="facts">Fun Facts</button></h3>
-<div class="information">Big Ben is more than 96 metres (105yrds) tall. You have to climb 334
-          steps to get to the Belfry and 399 steps to get to the very top where
-          the Ayrton Light which is</div>
+<div class="information">Big Ben is more than 96 metres (105yrds) high and has a clock on each of its four sides. To reach the Belfry, where the bells are located, you need to climb 334 steps. To go even higher, to the Ayrton Light, you need to climb 399 steps in total.
+<br>
+Big Ben is usually very accurate, but sometimes it has had some problems. For example, one time a group of starlings landed on the clock's big hand and slowed it down. Another time, on 31 December 1962, snow and ice had accumulated on the big hand and Big Ben was ten minutes late to ring in the new year. Many people in London were unhappy about that.
+
+<br>
+Big Ben's chimes have been broadcast by the BBC since 31 December 1923. They are also known as "The Bongs" by ITN. You can still hear them on BBC Radio 4 and the BBC World Service before some news bulletins. The sound of the chimes is recorded live from a microphone that is always installed in the tower.
 
     </main>
+
+
+
 <footer>
+  
+    
+<form  action="sonialeatarde@gmail.com" id="form">
+  <label>Which monument would you like to discover next time? <input type="text" /></label>
+    <button type="submit">🩷Submit🩷 </button>
+</form>
+<p id="log"></p>
+
   <div id="date"></div>
   Coded by Sonia Carrillo
 
@@ -267,11 +376,24 @@ color:rgb(2, 0, 97);}
     
           let answer= selectedOption.value;
 
-          if (answer === "Elizabeth") {
+          if (answer === "elizabeth") {
            alert ("Well done!");
          } else {alert ("Sorry! Please Try again!");
         } 
         }} 
+function checkLight() {
+
+        let selectedOption = document.querySelector('input[name="light"]:checked');
+                  if (selectedOption) {
+    
+          let answer= selectedOption.value;
+
+          if (answer === "commons") {
+           alert ("Well done!");
+         } else {alert ("Sorry! Please Try again!");
+        } 
+        }} 
+
 function checkStyle() {
         let selectedOption = document.querySelector('input[name="style"]:checked');
           if (selectedOption) {
@@ -289,6 +411,17 @@ function checkStyle() {
           let answer = selectedOption.value;
 
           if (answer === "henry") {
+           alert ("Well done!");
+         } else {alert ("Sorry! Please Try again!");
+        } 
+      }}
+
+      function checkLatin() {
+        let selectedOption = document.querySelector('input[name="latin"]:checked');
+          if (selectedOption) {
+          let answer = selectedOption.value;
+
+          if (answer === "victoria") {
            alert ("Well done!");
          } else {alert ("Sorry! Please Try again!");
         } 
@@ -314,6 +447,28 @@ function checkStyle() {
          } else {alert ("Sorry! Please Try again!");
         } 
       }}
+
+      
+         function checkChimes() { 
+          let selectedOption = document.querySelector('input[name="chimes"]:checked');
+          if (selectedOption) {
+          let answer = selectedOption.value;
+
+          if (answer === "bbc") {
+           alert ("Well done!");
+         } else {alert ("Sorry! Please Try again!");
+        } 
+      }}
+
+      function logSubmit(event) {
+  log.textContent = `Thank you! See you soon!`;
+  event.preventDefault();
+}
+
+const form = document.getElementById("form");
+const log = document.getElementById("log");
+form.addEventListener("submit", logSubmit);
+
 
 function showCurrentDate() {
   let dateElement = document.querySelector("#date");
